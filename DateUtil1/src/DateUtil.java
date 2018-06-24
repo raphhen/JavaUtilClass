@@ -131,7 +131,8 @@ public class DateUtil {
 			
 			//if the day is a public holiday do not increment loop so that an extra day will be added 
 			if(!isWeekend(laterDate) && !isHoliday(laterDate)) 
-				i++;				
+				i++;
+			
 		}
 		
 		return laterDate.getTime();

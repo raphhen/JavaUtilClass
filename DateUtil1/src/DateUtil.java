@@ -153,16 +153,5 @@ public class DateUtil {
 	}
 	
 	
-	//Only for Testing
-	public static void main(String[] args) throws ParseException {
-		
-		changeDateFormat();
-		String dateTest = "16/12/2018";
-		System.out.println(printHolidayName(stringToCalendar(dateTest)));
-		System.out.println("Valid date? " + isDateValid(dateTest));
-		System.out.println("Is weekened? " + isWeekend(stringToCalendar(dateTest)));
-		System.out.println("Is public holiday? " + isHoliday(stringToCalendar(dateTest)));
-		System.out.println("In five business days, the day will be: " + futureBusinessDay(stringToCalendar(dateTest), 5));
-			
-	}
+	
 }

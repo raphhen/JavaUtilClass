@@ -2,6 +2,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Scanner;
 
 public class DateUtil {
 
@@ -9,6 +10,12 @@ public class DateUtil {
     
 	static void changeDateFormat() {
 		format = new  SimpleDateFormat("dd/MM/yyyy");
+		
+	}
+	
+	static void changeDateFormat(String date) {
+		
+		format = new  SimpleDateFormat(date);
 		
 	}
 	
@@ -44,20 +51,20 @@ public class DateUtil {
 		return true;
 	}
 	
-	private static int getDay(Calendar date) throws ParseException {
+    public static int getDay(Calendar date) throws ParseException {
 		int dayOfMonth = date.get(Calendar.DAY_OF_MONTH);	
 		return dayOfMonth;
 		
 	}
 	
-	private static int getMonth(Calendar date) throws ParseException {
+	public  static int getMonth(Calendar date) throws ParseException {
 		
 		int month = date.get(Calendar.MONTH);
 		return month;
 		
 	}
 	
-	private static int getDayOfWeek(Calendar date) throws ParseException {
+	public static int getDayOfWeek(Calendar date) throws ParseException {
 		int dayOfWeek = date.get(Calendar.DAY_OF_WEEK);
 		return dayOfWeek;
 		
@@ -107,7 +114,7 @@ public class DateUtil {
 			if(months[i] ==month+1  &&  days[i] ==  day)
 			{
 				if(isWeekend(cal)) {
-				return  holidayNames[i]+ "/Weekend";
+				return  holidayNames[i]+ " - Weekend";
 			} else {
 				return  holidayNames[i];
 			}
@@ -151,7 +158,6 @@ public class DateUtil {
 		
 		return laterDate.getTime();
 	}
-	
-	
+		
 	
 }
